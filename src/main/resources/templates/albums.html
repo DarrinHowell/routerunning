@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hip-hop Classics</title>
+</head>
+<body>
+    <h1>Albums</h1>
+    <ul>
+        <li th:each="album : ${albums}">
+            <span th:text="${album}"></span>
+        </li>
+    </ul>
+</body>
+
+</html>
