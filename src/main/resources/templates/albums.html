@@ -6,11 +6,29 @@
 </head>
 <body>
     <h1>Albums</h1>
+
     <ul>
         <li th:each="album : ${albums}">
             <span th:text="${album}"></span>
         </li>
     </ul>
+
+    <form action="/albums" method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+
+        <label for="artist">Artist:</label>
+        <input type="text" name="artist" id="artist">
+
+        <label for="songCount">Number of Songs:</label>
+        <input type="text" name="songCount" id="songCount">
+
+        <label for="length">Length (min.):</label>
+        <input type="text" name="length" id="length">
+
+        <input type="submit">
+    </form>
+
 </body>
 
 </html>
